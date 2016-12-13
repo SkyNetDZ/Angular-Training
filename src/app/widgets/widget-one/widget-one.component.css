@@ -1,0 +1,7 @@
+:host {
+  display: block;
+  border: 1px groove red;
+  font-family: "Times New Roman";
+  background-color: #d5d5d5;
+  align-content: center;
+}
