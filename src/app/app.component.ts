@@ -30,7 +30,7 @@ import {WidgetThreeComponent} from "./widgets/widget-three/widget-three.componen
        </li>
     </ul>
 </template>
-<app-tree></app-tree>
+<app-table></app-table>
 `,
   styleUrls: ['./app.component.css']
 })
@@ -77,6 +77,7 @@ export class AppComponent {
             'tatatat'
           ]
      });
+
 
   }
 

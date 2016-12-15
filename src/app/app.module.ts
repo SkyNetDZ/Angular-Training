@@ -7,13 +7,12 @@ import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { MailService } from "./mail.service";
 import { CommonModule } from "@angular/common";
-import { TreeGridModule } from "./tree-grid/tree-grid.module";
 import {ServicesModule} from "./services/services.module";
 import {WidgetOneComponent} from "./widgets/widget-one/widget-one.component";
 import {WidgetTwoComponent} from "./widgets/widget-two/widget-two.component";
 import {WidgetThreeComponent} from "./widgets/widget-three/widget-three.component";
-import {TreeModule} from "./tree/tree.module";
-import {TreeComponent} from "./tree/tree.component";
+import {TableRowComponent} from "./table/table-row/table-row.component";
+import {TableComponent} from "./table/table.component";
 
 @NgModule({
   entryComponents: [WidgetThreeComponent],
@@ -22,16 +21,16 @@ import {TreeComponent} from "./tree/tree.component";
     SimpleFormComponent,
     WidgetOneComponent,
     WidgetTwoComponent,
-    WidgetThreeComponent
+    WidgetThreeComponent,
+    TableRowComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    TreeGridModule,
-    ServicesModule.forRoot(),
-    TreeModule
+    ServicesModule.forRoot()
   ],
   providers: [
     { provide: 'mail', useClass: MailService },

@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { TreeGridComponent } from './tree-grid.component';
+import { TableRowComponent } from './table-row.component';
 
-describe('Component: TreeGrid', () => {
+describe('Component: TableRow', () => {
   it('should create an instance', () => {
-    let component = new TreeGridComponent();
+    let component = new TableRowComponent();
     expect(component).toBeTruthy();
   });
 });
