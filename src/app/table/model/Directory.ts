@@ -3,14 +3,14 @@
  */
 export class Directory {
   name: string;
-  directories: [any];
+  children: [any];
   files: [any];
   expanded:boolean;
   checked:boolean;
-  constructor(name,directories,files) {
+  constructor(name,children,files) {
     this.name = name;
     this.files = files;
-    this.directories = directories;
+    this.children = children;
     this.expanded = false;
     this.checked = false;
   }
@@ -23,7 +23,7 @@ export class Directory {
     this.checkRecursive(newState);
   }
   checkRecursive(state){
-    this.directories.forEach(d => {
+    this.children.forEach(d => {
       d.checked = state;
       d.checkRecursive(state);
     })

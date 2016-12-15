@@ -1,15 +1,19 @@
-<template #row let-directories="directories">
-  <div class="rTableRow" *ngFor="let dir of directories">
-    <div class="rTableCell">
-      <span><input type="checkbox" [checked]="dir.checked" (click)="dir.check()"/></span>
-      <span (click)="dir.toggle()">{{ dir.name }}</span>
-      <div *ngIf="dir.expanded">
-        <div class="rTableRow" *ngFor="let file of dir.files">
-          <div class="rTableCell" >{{file}}</div>
-        </div>
-        <!--<app-table-row [directories]="dir.directories"></app-table-row>-->
-      </div>
-    </div>
-    <div class="rTableCell"><a href="tel:0123456785">0123 456 785</a></div>
+<div class="rTableRow" *ngFor="let dir of children">
+
+  <div class="rTableCell" [ngStyle]="{'padding-left': padding +'px'}">
+    <span><input type="checkbox" [checked]="dir.checked" (click)="dir.check()"/></span>
+    <span (click)="dir.toggle()">{{ dir.name }}</span>
   </div>
-</template>
+
+  <div class="rTableCell">balabala</div>
+
+  <div *ngIf="dir.expanded">
+    <app-table-row [children]="dir.children" [padding]="padding * 2"></app-table-row>
+    <div class="rTableRow" *ngFor="let file of dir.files">
+      <!--<div class="rTableCell" >{{file}}</div>-->
+    </div>
+  </div>
+
+</div>
+
+

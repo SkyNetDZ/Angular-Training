@@ -15,7 +15,7 @@
   height: 30px;
   overflow: hidden;
   padding: 3px 1.8%;
-  width: 28%;
+  width: 20%;
 }
 .rTable:after {
   visibility: hidden;
@@ -24,4 +24,12 @@
   content: " ";
   clear: both;
   height: 0;
+}
+
+.child-row  :first-child span {
+  padding-left: 10px;
+}
+
+:host{
+  cursor: hand;
 }
