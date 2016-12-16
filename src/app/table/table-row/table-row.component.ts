@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, ContentChildren, QueryList, ElementRef} from '@angular/core';
 import {Directory} from "../model/Directory";
 
 @Component({
@@ -6,17 +6,19 @@ import {Directory} from "../model/Directory";
   templateUrl: 'table-row.component.html',
   styleUrls: ['table-row.component.css']
 })
-export class TableRowComponent implements OnInit {
+export class TableRowComponent {
 
   @Input() children: Array<Directory>;
 
   @Input() padding: number ;
 
+  @ContentChildren('row') items: QueryList<ElementRef>;
+
   constructor() {
   }
 
-  ngOnInit() {
-    console.log(this.children);
+  ngAfterContentInit() {
+    console.log(this.items);
   }
 
 }

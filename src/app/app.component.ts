@@ -1,7 +1,12 @@
-import {Component, Inject, ViewChild, ViewContainerRef, ComponentFactoryResolver} from '@angular/core';
+import {
+  Component, Inject, ViewChild, ViewContainerRef, ComponentFactoryResolver, ContentChildren,
+  QueryList, ElementRef
+} from '@angular/core';
 import {SimpleService} from "./services/services.module";
 import {Resolve} from "@angular/router";
 import {WidgetThreeComponent} from "./widgets/widget-three/widget-three.component";
+import {TableRowComponent} from "./table/table-row/table-row.component";
+import {TestComponent} from "./widgets/test/test.component";
 
 @Component({
   selector: 'app-root',
@@ -30,7 +35,8 @@ import {WidgetThreeComponent} from "./widgets/widget-three/widget-three.componen
        </li>
     </ul>
 </template>
-<app-table></app-table>
+<app-table>
+</app-table>
 `,
   styleUrls: ['./app.component.css']
 })

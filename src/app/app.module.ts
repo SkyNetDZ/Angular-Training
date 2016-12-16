@@ -15,10 +15,10 @@ import {TableRowComponent} from "./table/table-row/table-row.component";
 import {TableComponent} from "./table/table.component";
 import {FilterComponent} from "./table/filter/filter.component";
 import {TableColumnComponent} from "./table/table-column/table-column.component";
-import {TableModule} from "./table/table.module";
+import {TableCellComponent} from "./table/table-cell/table-cell.component";
 
 @NgModule({
-  entryComponents: [WidgetThreeComponent,TableColumnComponent],
+  entryComponents: [WidgetThreeComponent,TableColumnComponent,TableCellComponent],
   declarations: [
     AppComponent,
     SimpleFormComponent,
@@ -28,7 +28,8 @@ import {TableModule} from "./table/table.module";
     TableRowComponent,
     TableComponent,
     FilterComponent,
-    TableColumnComponent
+    TableColumnComponent,
+    TableCellComponent
   ],
   imports: [
     CommonModule,
